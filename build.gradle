@@ -64,6 +64,7 @@ dependencies {
     implementation "org.http4k:http4k-server-netty:$http4k_version"
     implementation "org.slf4j:slf4j-api:$slf4j_version"
     implementation "org.slf4j:slf4j-simple:$slf4j_version"
+    compile group: 'software.amazon.awssdk', name: 'dynamodb', version: '2.10.41'
 
     //Test
     testImplementation "io.kotlintest:kotlintest-runner-junit5:$kotlintest_version"
