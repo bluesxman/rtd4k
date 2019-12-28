@@ -1,10 +1,11 @@
 buildscript {
     ext {
-        kotlin_version = '1.2.40'
-        http4k_version = '3.24.0'
+        kotlin_version = '1.3.61'
+        coroutines_version = '1.3.3'
+        http4k_version = '3.205.0'
         java_target_version = 1.8
-        slf4j_version = '1.7.25'
-        kotlintest_version = '3.1.0-RC2'
+        slf4j_version = '1.7.30'
+        kotlintest_version = '3.3.2'
     }
 
     repositories {
@@ -58,10 +59,12 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.http4k:http4k-core:$http4k_version"
     implementation "org.http4k:http4k-server-netty:$http4k_version"
     implementation "org.slf4j:slf4j-api:$slf4j_version"
     implementation "org.slf4j:slf4j-simple:$slf4j_version"
+
     //Test
     testImplementation "io.kotlintest:kotlintest-runner-junit5:$kotlintest_version"
 }
